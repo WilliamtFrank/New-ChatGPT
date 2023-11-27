@@ -345,20 +345,6 @@ function SyncConfigModal(props: { onClose?: () => void }) {
             </select>
           </ListItem>
 
-          <ListItem
-            title={Locale.Settings.Sync.Config.Proxy.Title}
-            subTitle={Locale.Settings.Sync.Config.Proxy.SubTitle}
-          >
-            <input
-              type="checkbox"
-              checked={syncStore.useProxy}
-              onChange={(e) => {
-                syncStore.update(
-                  (config) => (config.useProxy = e.currentTarget.checked),
-                );
-              }}
-            ></input>
-          </ListItem>
           {syncStore.useProxy ? (
             <ListItem
               title={Locale.Settings.Sync.Config.ProxyUrl.Title}
